@@ -1,0 +1,2 @@
+root/** filter=git-crypt diff=git-crypt
+Dockerfile filter=git-crypt diff=git-crypt
