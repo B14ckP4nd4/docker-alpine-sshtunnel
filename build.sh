@@ -9,6 +9,7 @@ docker create \
   --name=ssh_tunnel \
   --network=cwn \
   --privileged \
+  -p 2222:22
   --restart unless-stopped \
   ssh_tunnel
 
