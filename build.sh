@@ -8,9 +8,10 @@ docker create \
   --cap-add=NET_ADMIN \
   --name=ssh_tunnel \
   --network=cwn \
-  --publish=444:22/tcp \
   --privileged \
+  -p 2222:22 \
   --restart unless-stopped \
   ssh_tunnel
 
-docker start ssh_tunnel && docker logs ssh_tunnel -f
+
+docker start ssh_tunnel && docker ps -a && docker logs ssh_tunnel -f
